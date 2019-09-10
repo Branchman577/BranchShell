@@ -1,0 +1,79 @@
+********************************INTRODUCTION**************************************************
+
+Welcome to the readme for Branchshell! It contains all of the built in commands of the shell
+and and some of the things the shell is able to  do such as Batchfile input, output redirection
+and Background processing.
+
+**********************************************************************************************
+*********************************STARTUP******************************************************
+The shell is run in  python and can be ran inside a terminal on any unix system
+wiht Python3 installed on the hardware. To run the shell run the myshell.py file
+like you would any other python file.
+e.g. python3 myshell.py
+
+**********************************************************************************************
+*******************************COMMANDS1******************************************************
+cd <directory> - Changes the current default directory to <directory>. If the
+                 <directory> argument is not given (e.g. cd ) the current directory is reported.
+
+clr - Clears the screen of all on it.
+
+dir <directory> - Lists the contents of directory <directory>. If no directory
+                 is given then it lists the contents of the current dirctory.
+
+environ - Lists all the current environment strings ie. is a way to see all
+          current processes running on the machine.
+
+echo <comment> - Displays <comment> on the display followed by a new line
+                 (multiple spaces/tabs will be reduced to a single space on the display).
+
+help - Displays the user manual that you are currently reading!
+
+pause - Pauses all operations of the shell until the Enter button is pressed
+        on the keyboard. Then the process rerun again as normal.
+
+quit - Quits the shell thats currently open.
+
+**********************************************************************************************
+
+*******************************BATCHFILE INPUT************************************************
+Input inside another file can be given to the shell, it's given upon the startup of the shell 
+in the terminal. e.g. python3 myshell.py batchfile.txt
+All commands given in the file will be ran untill all commands are finished then the shell will 
+quit.
+Commands in the file For Example:
+cd test
+dir
+echo Hello World!
+**********************************************************************************************
+************************************OUTPUT REDIRECTION****************************************
+The shell is built to include output redirection for the commands that give out input.
+
+e.g. cd,dir,environ,echo,help 
+
+All these commands give back output when called, normally they are printed directly to the screen 
+with whatever output is given back. But without putput redirction the output can be sent and written
+into a file instead. This can be achieved in two similar but different ways.
+
+
+Output Redirection Overwriting file - ">"
+
+So doing output redirection with the symbol ">" works like this, echo Hello World! > filename.txt
+
+If the redirection character is just > then the outputfile is created if it does not exist and 
+overwritten by the new contents if it does.
+
+Output Redirection Appending to file - ">>"
+So doing output redirection with the symbol ">>" works like this, echo Hello World! >> filename.txt
+
+If the redirection token is >> then outputfile is created if it does not exist and appended to if it does.
+**********************************************************************************************
+************************************BACKGROUND PROCESSING*************************************
+The shell is also built to include background execution of programs. An ampersand (&) put at the end of a command
+
+e.g. dir directoryname & 
+
+This will run that command in the background and return any output if any is given back. it will return to the
+commandline as soon as the process has been sent out. ie it deoesnt wait for the process to finish.
+**********************************************************************************************
+
